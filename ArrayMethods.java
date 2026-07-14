@@ -31,33 +31,66 @@ ArrayMethods
 public class ArrayMethods
 {
   /**DESCRIPTION: */
+  // { 12, 16, 26, 42, 53, 77, 84 }
   public static String arrayString(int[] a)
   {
-    return ""; //STUB to keep compiler happy
+    String contents = "{ ";
+
+    for (int i = 0; i < a.length; i++)
+    {
+      contents += a[i];
+      if (i < a.length - 1) {
+        contents += ", ";
+
+        }
+      else {
+        contents += " ";
+      }
+    }
+    contents += "}";
+
+    return contents; //STUB to keep compiler happy
   }
-  
+
   /**DESCRIPTION: */
   public static void swap(int[] array, int a, int b)
   {
-  
+    int temp = array[a];
+    array[a] = array[b];
+    array[b] = temp;
   }
 	
 	/**DESCRIPTION: */
   public static int indexOfMin(int[] array, int startIndex)
   {
-    return 0; //STUB to keep compiler happy
+    int minIndex = startIndex;
+
+    for (int i = startIndex; i < array.length; i++) {
+      if (array[i] < array[minIndex]) {
+        minIndex = i;
+      }
+    }
+    return minIndex; //STUB to keep compiler happy
   }
 
 	/**DESCRIPTION: */
   public static void reverse(int[] array)
   {
-
+    /*
+    for(int i = 0; i < array.length / 2; i++) {
+      swap(i, array.length - 1 - i);
+    }
+     */
   }
 
 	/**DESCRIPTION: */
   public static void selectionSort(int[] array)
   {
+    /*
 
+
+
+     */
   }
 
 }
