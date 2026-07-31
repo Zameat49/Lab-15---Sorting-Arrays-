@@ -14,5 +14,15 @@ class Main
         System.out.println(ArrayMethods.arrayString(numbers));
         System.out.println("Min @ position: " + minIndex);
 
+// Test reverse
+        int[] numbersToReverse = { 42, 16, 84, 12, 77, 26, 53 };
+        ArrayMethods.reverse(numbersToReverse);
+        System.out.println(ArrayMethods.arrayString(numbersToReverse));
+
+// Test selectionSort
+        int[] numbersToSort = { 42, 16, 84, 12, 77, 26, 53 };
+        ArrayMethods.selectionSort(numbersToSort);
+        System.out.println(ArrayMethods.arrayString(numbersToSort));
+
   }
 }
